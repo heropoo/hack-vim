@@ -12,6 +12,10 @@ install="hack-vim.install"
 url="https://github.com/heropoo/hack-vim"
 #source=("git+https://github.com/heropoo/hack-vim#branch=master")
 #sha256sums=("f4e927777406e10ffdfffeab663cd266b3c2967b5c772ab1cf9ea1be852003fa")
+
+prepare() {
+    cp -rf $(pwd)/../.vim $(pwd)/../.vimrc $srcdir
+}
 	
 package() {
 	mkdir -p "${pkgdir}/etc/skel/"
