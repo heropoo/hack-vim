@@ -1,4 +1,2 @@
-src/
 pkg/
-hack-vim/
 *.pkg.tar.xz
